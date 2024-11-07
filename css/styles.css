@@ -1,0 +1,81 @@
+.admin-card {
+    border: 2px solid #2196F3;
+    background: #f8f8f8;
+}
+
+.welcome-btn {
+    background: #2196F3;
+}
+
+.welcome-btn:hover {
+    background: #1976D2;
+}
+
+.portal-section {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.announcement-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.announcement-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.announcement-footer {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.event-details {
+    color: #666;
+}
+
+.event-details p {
+    margin: 0.5rem 0;
+}
+
+.event-details i {
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.no-items {
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+}
+
+.announcements-section,
+.events-section {
+    margin: 2rem 0;
+}
+
+.announcements-section h2,
+.events-section h2 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+} 

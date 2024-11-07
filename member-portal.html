@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Portal - Kaneshie SDA Church</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/member-portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="portal-nav">
+        <div class="nav-brand">
+            <div class="logo">
+                <img src="https://th.bing.com/th?id=OIP.oQbCvl-yKg0GehZ7nlj4TAHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2" alt="SDA Logo">
+            </div>
+            <span>Kaneshie SDA Church</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="events-page.html"><i class="fas fa-calendar"></i> Events</a>
+            <a href="payment-portal.html"><i class="fas fa-hand-holding-heart"></i> Giving</a>
+            <a href="#prayers"><i class="fas fa-pray"></i> Prayer Requests</a>
+        </div>
+        <div class="nav-controls">
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
+            </div>
+            <div class="nav-profile">
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Exit Portal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="portal-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-header">
+                <h1>Welcome to Your Church Portal</h1>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="action-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Give Online</h3>
+                <p>Submit your tithes and offerings online</p>
+                <a href="payment-portal.html" class="action-btn">Give Now</a>
+            </div>
+            <div class="action-card" id="liveStreamBtn" onclick="openLiveStream(event)">
+                <i class="fas fa-video"></i>
+                <span>Live Stream</span>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-book-reader"></i>
+                <h3>EGW Writings</h3>
+                <p>Access Ellen G. White's writings</p>
+                <a href="https://egwwritings.org" class="action-btn">Read Now</a>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-cross"></i>
+                <h3>28 Fundamentals</h3>
+                <p>Learn about SDA beliefs</p>
+                <a href="https://en.wikipedia.org/wiki/28_Fundamental_Beliefs" target="_blank" class="action-btn">Learn More</a>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-book"></i>
+                <h3>Sabbath School</h3>
+                <p>Access weekly lessons and resources</p>
+                <a href="https://www.sabbath.school/" target="_blank" class="action-btn">Study Now</a>
+            </div>
+            <div class="action-card">
+                <i class="fas fa-music"></i>
+                <h3>SDA Hymnal</h3>
+                <p>Access all church hymns online</p>
+                <a href="https://www.sdahymnal.org" target="_blank" class="action-btn">View Hymns</a>
+            </div>
+        </section>
+
+        <!-- Sabbath Program Schedule -->
+        <section class="sabbath-schedule">
+            <h2><i class="fas fa-clock"></i> Weekly Program Schedule</h2>
+            <div id="weeklySchedule" class="schedule-list">
+                <!-- Schedule will be loaded dynamically -->
+            </div>
+        </section>
+        <!-- Prayer Request Section -->
+        <section id="prayers" class="prayer-section">
+            <h2><i class="fas fa-pray"></i> Prayer Requests</h2>
+            <form id="prayerForm" class="prayer-form">
+                <textarea 
+                    id="prayerRequest" 
+                    name="prayerRequest" 
+                    placeholder="Share your prayer request..." 
+                    rows="4" 
+                    required
+                ></textarea>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="prayerAnonymous" id="prayerAnonymous">
+                        Submit Anonymously
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Submit Prayer Request</button>
+            </form>
+        </section>
+
+        <!-- Thanksgiving Section -->
+        <section id="thanksgiving" class="thanksgiving-section">
+            <h2><i class="fas fa-dove"></i> Share Your Testimony</h2>
+            <form id="testimonyForm" class="thanksgiving-form">
+                <div class="form-group">
+                    <label for="testimonyType">Type of Testimony</label>
+                    <select id="testimonyType" name="testimonyType" required>
+                        <option value="">Select type...</option>
+                        <option value="healing">Divine Healing</option>
+                        <option value="provision">Divine Provision</option>
+                        <option value="protection">Divine Protection</option>
+                        <option value="guidance">Divine Guidance</option>
+                        <option value="other">Other Blessings</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="testimony">Your Testimony</label>
+                    <textarea 
+                        id="testimony" 
+                        name="testimony" 
+                        placeholder="Share how God has blessed you..." 
+                        rows="4" 
+                        required
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="anonymous" id="anonymous">
+                        Submit Anonymously
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Share Testimony</button>
+            </form>
+        </section>
+
+        <!-- Announcements Section -->
+        <section class="announcements-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullhorn"></i> Church Updates</h2>
+            </div>
+            <div class="updates-buttons">
+                <a href="announcements.html" class="update-btn announcements-btn">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>View Announcements</span>
+                </a>
+                <a href="events-page.html" class="update-btn events-btn">
+                    <i class="fas fa-calendar"></i>
+                    <span>View Events</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +233 XX XXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@kaneshisdachurch.org</p>
+            </div>
+            <div class="social-links">
+                <a href="https://web.facebook.com/kaneshie.sdachurch/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@cosmoskmedia254" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kaneshie SDA Church. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/member-portal.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html> 

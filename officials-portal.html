@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officials Portal - Kaneshie SDA Church</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/officials-portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="portal-nav">
+        <div class="nav-brand">
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/OIP.oQbCvl-yKg0GehZ7nlj4TAHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&dpr=1.5&pid=3.1&rm=2" alt="SDA Logo">
+            </div>
+            <span>Kaneshie SDA Church</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#members"><i class="fas fa-users"></i> Members</a>
+            <a href="#reports"><i class="fas fa-chart-bar"></i> Reports</a>
+        </div>
+        <div class="nav-controls">
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
+            </div>
+            <div class="nav-profile">
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Exit Portal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="portal-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>Church Officials Dashboard</h1>
+            <p class="current-date">Today: <span id="currentDate"></span></p>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-link">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <h3>Active Members</h3>
+                        <p id="activeMembersCount">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <a href="testimonies-page.html" class="stat-link">
+                    <i class="fas fa-dove"></i>
+                    <div class="stat-info">
+                        <h3>Prayer Requests & Thanksgiving</h3>
+                        <p id="prayerRequestsCount">Loading...</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- View More Section -->
+        <section class="view-more-section">
+            <div class="view-more-buttons">
+                <a href="events-page.html" class="view-more-btn">
+                    <i class="fas fa-calendar"></i>
+                    <span>View All Events</span>
+                </a>
+                <a href="announcements.html" class="view-more-btn">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>View All Announcements</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +233 XX XXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@kaneshisdachurch.org</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kaneshie SDA Church. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/officials-portal.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html> 
